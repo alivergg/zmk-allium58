@@ -18,7 +18,7 @@
 
         Layer3 {
             bindings = <&mo 3>;
-            key-positions = <52 55>;
+            key-positions = <51 56>;
         };
     };
 
@@ -26,7 +26,8 @@
         cmdOptT: cmdOptT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp LEFT_ALT &kp T>;
+            bindings = <&macro_press>, <&kp LEFT_WIN &kp LEFT_ALT &kp T>;
+
             label = "CMDOPTT";
         };
     };
@@ -60,11 +61,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&none         &none             &none              &none              &none         &none                             &trans        &trans     &trans        &trans        &trans        &trans
-&kp NUMBER_1  &kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3       &kp NUMBER_4  &kp NUMBER_5                      &kp NUMBER_6  &kp N7     &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp F12
-&kp GRAVE     &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                         &kp CARET     &kp AMPS   &kp ASTRK     &kp LPAR      &kp RPAR      &kp TILDE
-&kp F13       &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &cmdOptT    &trans  &trans        &kp MINUS  &kp PLUS      &kp LBRC      &kp RBRC      &kp PIPE
-                                                   &trans             &trans        &trans        &trans      &trans  &trans        &trans     &trans
+&trans  &trans            &trans             &trans             &trans            &trans                                 &trans        &trans    &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3       &kp NUMBER_4      &kp NUMBER_5                           &kp NUMBER_6  &kp N7    &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+&trans  &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR        &kp PRCNT                              &kp CARET     &kp AMPS  &kp ASTRK     &kp LPAR      &kp RPAR      &kp TILDE
+&trans  &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &cmdOptT    &trans  &kp MINUS     &kp PLUS  &kp EQUAL     &kp LBRC      &kp RBRC      &kp PIPE
+                                             &trans             &trans            &trans             &trans      &trans  &trans        &trans    &trans
             >;
         };
 
@@ -77,11 +78,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &kp F7       &kp F8     &kp F9        &kp F10    &kp F11    &kp F12
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp UP_ARROW  &kp N9     &kp N0     &kp C_VOL_UP
-&kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans       &kp LEFT   &kp DOWN      &kp RIGHT  &kp RIGHT  &kp C_VOL_DN
-&kp LCTRL  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL     &kp LBKT   &kp RBKT   &kp BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &kp F7  &kp F8    &kp F9        &kp F10    &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &kp UP_ARROW  &trans     &trans   &kp C_VOL_UP
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans   &kp C_VOL_DN
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans        &trans     &trans   &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans
             >;
         };
 
