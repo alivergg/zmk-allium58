@@ -39,6 +39,18 @@
 
             label = "CMDOPTT";
         };
+
+        screenshoot_mac: screenshoot_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp NUMBER_4>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp NUMBER_4>;
+
+            label = "SCREENSHOOT_MAC";
+        };
     };
 
     keymap {
@@ -70,11 +82,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans            &trans             &trans             &trans            &trans                                 &trans        &trans    &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3       &kp NUMBER_4      &kp NUMBER_5                           &kp NUMBER_6  &kp N7    &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
-&trans  &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR        &kp PRCNT                              &kp CARET     &kp AMPS  &kp ASTRK     &kp LPAR      &kp RPAR      &kp TILDE
-&trans  &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &cmdOptT    &trans  &kp MINUS     &kp PLUS  &kp EQUAL     &kp LBRC      &kp RBRC      &kp PIPE
-                                             &trans             &trans            &trans             &trans      &trans  &trans        &trans    &trans
+&screenshoot_mac  &trans            &trans             &trans             &trans            &trans                                 &trans        &trans    &trans        &trans        &trans        &trans
+&trans            &kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3       &kp NUMBER_4      &kp NUMBER_5                           &kp NUMBER_6  &kp N7    &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+&trans            &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR        &kp PRCNT                              &kp CARET     &kp AMPS  &kp ASTRK     &kp LPAR      &kp RPAR      &kp TILDE
+&trans            &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &cmdOptT    &trans  &kp MINUS     &kp PLUS  &kp EQUAL     &kp LBRC      &kp RBRC      &kp PIPE
+                                                       &trans             &trans            &trans             &trans      &trans  &trans        &trans    &trans
             >;
         };
 
@@ -100,7 +112,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans          &trans          &trans          &trans           &trans  &bt BT_CLR_ALL
 &trans      &trans        &trans        &trans        &trans        &trans                          &msc SCRL_DOWN  &trans          &mmv MOVE_UP    &trans           &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans                          &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans          &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans          &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &kp C_AL_LOCK
                                         &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans
             >;
         };
@@ -111,7 +123,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp L   &trans  &trans    &trans  &trans  &trans  &trans
+                        &trans  &kp L   &kp O   &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
