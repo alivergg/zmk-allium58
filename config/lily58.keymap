@@ -122,7 +122,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans          &trans          &trans          &trans           &trans  &bt BT_CLR_ALL
 &trans      &trans        &trans        &trans        &trans        &trans                          &msc SCRL_DOWN  &trans          &mmv MOVE_UP    &trans           &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans                          &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans          &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &kp K_COFFEE
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans          &mkp LCLK       &mkp MCLK       &mkp RCLK        &trans  &kp C_AL_SCREENSAVER
                                         &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans
             >;
         };
